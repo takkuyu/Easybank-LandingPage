@@ -1,0 +1,227 @@
+body {
+    font-family: 'Public Sans', sans-serif;
+    // font-size: 18px;
+    font-size: 62.5%;
+    margin: 0;
+    color: hsl(233, 8%, 62%);
+}
+
+header {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+        height: 30px;
+    }
+
+    ul {
+        list-style-type: none;
+
+        li {
+            display: inline;
+
+            &:not(:last-child) {
+                padding-right: 2em;
+
+            }
+
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.btn {
+    color: #fff;
+    font-size: 1.5em;
+    height: 50px;
+    width: 180px;
+    border-radius: 50px;
+    background: linear-gradient(.25turn, hsl(136, 65%, 51%), hsl(192, 70%, 51%))
+}
+
+.main-container {}
+
+.main-top {
+
+    //    background-color: hsl(0, 0%, 98%);
+    height: 70em;
+
+    .main-top-left {
+        height: 70em;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 5% 0 10%;
+
+        h1 {
+            font-weight: 300;
+            font-size: 5em;
+            color: hsl(233, 26%, 24%);
+            margin-bottom: 2rem;
+        }
+
+        p {
+            font-weight: 300;
+            font-size: 2em;
+            margin-bottom: 2rem;
+        }
+
+    }
+
+    .main-top-right {
+        background-image: url(../images/bg-intro-desktop.svg);
+        // background-position: top 0 left 200px, auto;
+        // background-size: cover, auto;
+        background-repeat: no-repeat;
+        // background-position-y: -15em;
+        background-position: left -50px top -260px;
+        // background-position-x: 10em , 0;
+        height: 70em;
+        // box-sizing: border-box;
+        // padding-left: 300px;
+        // position: relative;
+        // overflow: hidden;
+
+        img {
+            // position: relative;
+            // position: absolute;
+            position: relative;
+            top: -6.8em;
+            // width: 80%;
+            // right: 5em;
+            // left:-5em;
+            right: -10em;
+            // overflow: hidden;
+            // overflow: scroll;
+        }
+
+    }
+
+}
+
+.main-center {
+    background-color: hsl(0, 0%, 97%);
+
+    height: 70em;
+    padding: 10em 0 5em;
+
+    .main-center-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+
+        height: 100%;
+
+        .main-center-top {
+            width: 70%;
+
+            h1 {
+                font-weight: 300;
+                // font-size: 3em;
+                color: hsl(233, 26%, 24%);
+                margin-bottom: 2rem;
+            }
+
+            p {
+                font-weight: 300;
+                font-size: 2em;
+                margin-bottom: 2rem;
+            }
+
+            // padding: 3em 0;
+        }
+
+        .main-center-bottom {
+            // padding: 1rem;
+
+            img {
+                display: inline-block;
+                margin-bottom: 2rem;
+            }
+
+            h3 {
+                font-weight: 300;
+                color: hsl(233, 26%, 24%);
+                margin-bottom: 2rem;
+            }
+
+            p {
+                font-weight: 300;
+                font-size: 1.8em;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+}
+
+.main-bottom {
+    height: 70em;
+    padding: 10em 0 5em;
+    background-color: hsl(0, 0%, 98%);
+
+    .main-bottom-top {
+        h1 {
+            font-weight: 300;
+            color: hsl(233, 26%, 24%);
+            margin-bottom: 2rem;
+        }
+    }
+
+    .main-center-bottom {
+
+        .latest-article-card {
+            padding: 0;
+            // background-color: hsl(0, 0%, 100%);
+            // &:not(:last-child){
+                padding-right: 2.5em;
+            // }
+
+            .article-content {
+                background-color: hsl(0, 0%, 100%);
+
+
+                img {
+                    display: inline-block;
+                    width: 100%;
+                }
+
+                .article-content-inner {
+                    padding: 2em;
+
+                    h4 {
+                        font-weight: 300;
+                        font-size: 2em;
+                        color: hsl(233, 26%, 24%);
+                    }
+    
+                    p {
+                        font-weight: 300;
+                        font-size: 1.5em;
+                        margin: 0;
+    
+                        &.author {
+                            font-size: 1.5em;
+                            margin-bottom: 1rem;
+                        }
+                    }
+
+                }
+
+
+            }
+
+
+        }
+    }
+
+}
