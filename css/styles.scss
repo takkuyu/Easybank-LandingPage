@@ -19,6 +19,7 @@ header {
     }
 
     ul {
+        // Better to use nav ???
         list-style-type: none;
 
         li {
@@ -37,7 +38,8 @@ header {
     }
 }
 
-.btn {
+.request-button {
+    border: none;
     color: #fff;
     font-size: 1.5em;
     height: 50px;
@@ -45,8 +47,6 @@ header {
     border-radius: 50px;
     background: linear-gradient(.25turn, hsl(136, 65%, 51%), hsl(192, 70%, 51%))
 }
-
-.main-container {}
 
 .main-top {
 
@@ -157,7 +157,7 @@ header {
             p {
                 font-weight: 300;
                 font-size: 1.8em;
-                margin-bottom: 2rem;
+                margin-bottom: 0;
             }
         }
     }
@@ -169,6 +169,11 @@ header {
     padding: 10em 0 5em;
     background-color: hsl(0, 0%, 98%);
 
+    .container {
+        padding: 0;
+        height: 100%;
+    }
+
     .main-bottom-top {
         h1 {
             font-weight: 300;
@@ -178,50 +183,121 @@ header {
     }
 
     .main-center-bottom {
+        display: flex;
+        justify-content: space-between;
+
 
         .latest-article-card {
-            padding: 0;
-            // background-color: hsl(0, 0%, 100%);
-            // &:not(:last-child){
-                padding-right: 2.5em;
-            // }
+            width: 23.3%;
+            background-color: hsl(0, 0%, 100%);
 
-            .article-content {
-                background-color: hsl(0, 0%, 100%);
-
-
-                img {
-                    display: inline-block;
-                    width: 100%;
-                }
-
-                .article-content-inner {
-                    padding: 2em;
-
-                    h4 {
-                        font-weight: 300;
-                        font-size: 2em;
-                        color: hsl(233, 26%, 24%);
-                    }
-    
-                    p {
-                        font-weight: 300;
-                        font-size: 1.5em;
-                        margin: 0;
-    
-                        &.author {
-                            font-size: 1.5em;
-                            margin-bottom: 1rem;
-                        }
-                    }
-
-                }
-
-
+            img {
+                display: inline-block;
+                width: 100%;
+                height: 20em;
             }
 
+            .article-content {
+                padding: 2.5em 2em;
 
+                h4 {
+                    font-weight: 300;
+                    font-size: 2em;
+                    color: hsl(233, 26%, 24%);
+                }
+
+                p {
+                    font-weight: 300;
+                    font-size: 1.5em;
+                    margin: 0;
+
+                    &.author {
+                        font-size: 1.5em;
+                        margin-bottom: 1rem;
+                    }
+                }
+
+            }
         }
     }
 
+}
+
+footer {
+    height: 20em;
+    background-color: hsl(220, 16%, 30%);
+
+    .footer-container {
+        height: 100%;
+
+        .row {
+            height: 100%;
+            padding: 4em 0;
+
+            .footer-left {
+
+                // height: 20em;
+                >img {
+                    height: 2em;
+                }
+
+                ul {
+                    height: 10em;
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    padding-top: 8em;
+
+                    li {
+                        height: 2em;
+                        display: inline-block;
+
+                        &:not(:last-child) {
+                            padding-right: .8em;
+                        }
+                    }
+                }
+            }
+
+            .footer-middle {
+                ul {
+                    height: 100%;
+                    display: grid;
+                    padding: 0;
+                    margin: 0;
+                    list-style-type: none;
+                    grid-template-columns: 16em 16em;
+                    grid-template-rows: 4em 4em;
+
+                    li {
+                        // display: inline;
+                        font-weight: 300;
+                        font-size: 1.5em;
+                        color: #fff;
+                        display: flex;
+                        align-items: center;
+
+                        a {
+                            color: inherit;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+
+            .footer-right {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: space-between;
+
+                p{
+                    font-weight: 300;
+                    font-size: 1.3em;
+                    margin: 0;
+                }
+            }
+        }
+
+    }
 }
