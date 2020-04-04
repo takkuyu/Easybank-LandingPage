@@ -1,6 +1,5 @@
 body {
     font-family: 'Public Sans', sans-serif;
-    // font-size: 18px;
     font-size: 62.5%;
     margin: 0;
     color: hsl(233, 8%, 62%);
@@ -8,22 +7,22 @@ body {
 
 header {
     width: 80%;
+    height: 10em;
     margin: 0 auto;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    img {
-        height: 30px;
-    }
+    position: relative;
+    background-color: #fff;
 
     ul {
-        // Better to use nav ???
         list-style-type: none;
+        margin: 0;
+        padding: 0;
 
         li {
-            display: inline;
+            display: inline-block;
 
             &:not(:last-child) {
                 padding-right: 2em;
@@ -31,31 +30,46 @@ header {
             }
 
             a {
+                font-size: 1.125rem;
                 color: inherit;
-                text-decoration: none;
+
+                &:hover {
+                    color: hsl(233, 26%, 24%);
+                    text-decoration: none;
+                    padding-bottom: 2.25rem;
+                    border-bottom: hsl(136, 65%, 51%) 4px solid;
+                }
             }
+
         }
     }
+}
+
+html {
+    // font-size: 20px;
 }
 
 .request-button {
     border: none;
     color: #fff;
-    font-size: 1.5em;
-    height: 50px;
-    width: 180px;
-    border-radius: 50px;
-    background: linear-gradient(.25turn, hsl(136, 65%, 51%), hsl(192, 70%, 51%))
+    font-size: 1.8em;
+    height: 3rem;
+    width: 11rem;
+    border-radius: 3rem;
+    background: linear-gradient(.25turn, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+
+    &:hover {
+        background: linear-gradient(.25turn, rgb(154, 199, 166), rgb(127, 195, 212));
+    }
 }
 
 .main-top {
 
-    //    background-color: hsl(0, 0%, 98%);
+    background-color: hsl(0, 0%, 98%);
     height: 70em;
 
     .main-top-left {
         height: 70em;
-
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -77,78 +91,36 @@ header {
     }
 
     .main-top-right {
+        padding: 0;
         background-image: url(../images/bg-intro-desktop.svg);
-        // background-position: top 0 left 200px, auto;
-        // background-size: cover, auto;
         background-repeat: no-repeat;
-        // background-position-y: -15em;
-        background-position: left -50px top -260px;
-        // background-position-x: 10em , 0;
+        background-position: left -70px top -260px;
         height: 70em;
-        // box-sizing: border-box;
-        // padding-left: 300px;
-        // position: relative;
-        // overflow: hidden;
 
-        img {
-            // position: relative;
-            // position: absolute;
-            position: relative;
-            top: -6.8em;
-            // width: 80%;
-            // right: 5em;
-            // left:-5em;
-            right: -10em;
-            // overflow: hidden;
-            // overflow: scroll;
+        .image-container {
+            background-image: url(../images/image-mockups.png);
+            background-position: top -120px left 90px;
+            background-repeat: no-repeat;
+            height: 85em;
         }
-
     }
 
 }
 
 .main-center {
-    background-color: hsl(0, 0%, 97%);
-
+    background-color: hsl(0, 0%, 96%);
     height: 70em;
-    padding: 10em 0 5em;
+    padding: 10em 0 10em;
 
     .main-center-container {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
-
         height: 100%;
+        padding: 0;
 
         .main-center-top {
-            width: 70%;
-
             h1 {
-                font-weight: 300;
-                // font-size: 3em;
-                color: hsl(233, 26%, 24%);
-                margin-bottom: 2rem;
-            }
-
-            p {
-                font-weight: 300;
-                font-size: 2em;
-                margin-bottom: 2rem;
-            }
-
-            // padding: 3em 0;
-        }
-
-        .main-center-bottom {
-            // padding: 1rem;
-
-            img {
-                display: inline-block;
-                margin-bottom: 2rem;
-            }
-
-            h3 {
                 font-weight: 300;
                 color: hsl(233, 26%, 24%);
                 margin-bottom: 2rem;
@@ -157,8 +129,35 @@ header {
             p {
                 font-weight: 300;
                 font-size: 1.8em;
-                margin-bottom: 0;
+                margin-bottom: 2rem;
             }
+        }
+
+        .main-center-bottom {
+            display: flex;
+            justify-content: space-between;
+
+            .reason-card {
+                width: 24%;
+
+                img {
+                    display: inline-block;
+                    margin-bottom: 2rem;
+                }
+
+                h3 {
+                    font-weight: 300;
+                    color: hsl(233, 26%, 24%);
+                    margin-bottom: 2rem;
+                }
+
+                p {
+                    font-weight: 300;
+                    font-size: 1.7em;
+                    margin-bottom: 0;
+                }
+            }
+
         }
     }
 
@@ -195,6 +194,7 @@ header {
                 display: inline-block;
                 width: 100%;
                 height: 20em;
+                object-fit: cover;
             }
 
             .article-content {
@@ -204,6 +204,11 @@ header {
                     font-weight: 300;
                     font-size: 2em;
                     color: hsl(233, 26%, 24%);
+
+                    &:hover {
+                        color: hsl(192, 70%, 51%);
+                        cursor: pointer;
+                    }
                 }
 
                 p {
@@ -225,7 +230,7 @@ header {
 
 footer {
     height: 20em;
-    background-color: hsl(220, 16%, 30%);
+    background-color: hsl(233, 26%, 24%);
 
     .footer-container {
         height: 100%;
@@ -236,7 +241,6 @@ footer {
 
             .footer-left {
 
-                // height: 20em;
                 >img {
                     height: 2em;
                 }
@@ -270,12 +274,16 @@ footer {
                     grid-template-rows: 4em 4em;
 
                     li {
-                        // display: inline;
                         font-weight: 300;
-                        font-size: 1.5em;
+                        font-size: 1.8em;
                         color: #fff;
                         display: flex;
                         align-items: center;
+
+                        &:hover {
+                            color: hsl(192, 70%, 51%);
+                            cursor: pointer;
+                        }
 
                         a {
                             color: inherit;
@@ -291,9 +299,9 @@ footer {
                 align-items: flex-end;
                 justify-content: space-between;
 
-                p{
+                p {
                     font-weight: 300;
-                    font-size: 1.3em;
+                    font-size: 1.5em;
                     margin: 0;
                 }
             }
