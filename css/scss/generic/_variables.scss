@@ -30,6 +30,10 @@ $pad-double : $pad*2;
 $pad-half : $pad/2;
 $pad-quarter :$pad/4;
 
+$z-index-low: 2;
+$z-index-med: 5;
+$z-index-high: 10;
+
 //Borders
 $border-med: 3px;
 $border-thick: 7px;
@@ -41,7 +45,7 @@ $bp-small-2 : 36em;
 $bp-med : 46.8em;
 $bp-med-2 : 48em;
 $bp-large : 50em;
-$bp-large-2 : 66em;
-$bp-xl : 73em;
+$bp-large-2 : 62em;
+$bp-xl : 75em;
 $bp-xxl : 89em;
 $bp-xxxl : 93em;

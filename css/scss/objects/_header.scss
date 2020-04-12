@@ -7,6 +7,11 @@ header {
     width: 100%;
     margin: 0;
 
+    position: fixed;
+    top: 0;
+    z-index: $z-index-med;
+    background-color: $white;
+
     img {
         width: 7rem;
     }
@@ -49,10 +54,10 @@ header {
                     color: inherit;
 
                     &:hover {
-                        color: hsl(233, 26%, 24%);
+                        color: $Dark-Blue;
                         text-decoration: none;
                         padding-bottom: 1.4rem;
-                        border-bottom: hsl(136, 65%, 51%) 4px solid;
+                        border-bottom: $Lime-Green 4px solid;
                     }
                 }
 
@@ -63,7 +68,7 @@ header {
     }
 
     /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-    @media (min-width: 768px) {
+    @media (min-width: $bp-med-2) {
         ul {
             li {
 
@@ -71,10 +76,10 @@ header {
                     font-size: 1.125em;
 
                     &:hover {
-                        color: hsl(233, 26%, 24%);
+                        color: $Dark-Blue;
                         text-decoration: none;
                         padding-bottom: 1.4rem;
-                        border-bottom: hsl(136, 65%, 51%) 4px solid;
+                        border-bottom: $Lime-Green 4px solid;
                     }
                 }
 
@@ -83,34 +88,26 @@ header {
 
         .request-button {
             display: block;
-            border: none;
-            color: #fff;
-            font-size: 1.1em;
-            padding: .5rem .8rem;
-            border-radius: 1rem;
-            background: linear-gradient(.25turn, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
-
-            &:hover {
-                background: linear-gradient(.25turn, rgb(154, 199, 166), rgb(127, 195, 212));
-            }
         }
-
     }
 
     /* Large devices (desktops, 992px and up) */
-    @media (min-width: 992px) {
-        // padding: 2em 10em;
-        padding: 2em 0;
-        width: 80%;
-        margin: 0 auto;
-
-        .request-button {
-            font-size: 1.1em;
-            padding: .5rem 1.5rem;
-            border-radius: 1rem;
-        }
+    @media (min-width: $bp-large-2) {
+        padding: 2em 13em;
     }
 
     /* Extra large devices (large desktops, 1200px and up) */
-    @media (min-width: 1200px) {}
+    @media (min-width: $bp-xl) {
+        ul {
+            li {
+                &:not(:last-child) {
+                    padding-right: 3em;
+                }
+
+                a {
+                    font-size: 1.3em;
+                }
+            }
+        }
+    }
 }

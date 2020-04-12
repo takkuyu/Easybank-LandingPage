@@ -5,14 +5,14 @@
     top: 7em;
     left: 0;
     background-color: rgba(0, 0, 0, .2);
-    z-index: 2;
+    // z-index: $z-index-med;
     display: none;
 
     .header-modal {
         background-color: #fff;
         position: fixed;
         width: 80vw;
-        z-index: 3;
+        // z-index: $z-index-high;
         top: 8em;
         left: 10vw;
         padding: 2em 0;

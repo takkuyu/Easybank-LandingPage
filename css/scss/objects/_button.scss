@@ -1,13 +1,17 @@
-// .request-button {
-//     border: none;
-//     color: #fff;
-//     font-size: 1.8em;
-//     height: 3rem;
-//     width: 11rem;
-//     border-radius: 3rem;
-//     background: linear-gradient(.25turn, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+.request-button {
+    border: none;
+    color: #fff;
+    font-size: 1.1em;
+    padding: .5rem .8rem;
+    border-radius: 1rem;
+    background: linear-gradient(.25turn, $Lime-Green, $Bright-Cyan);
 
-//     &:hover {
-//         background: linear-gradient(.25turn, rgb(154, 199, 166), rgb(127, 195, 212));
-//     }
-// }
+    &:hover {
+        background: linear-gradient(.25turn, rgb(154, 199, 166), rgb(127, 195, 212));
+    }
+
+    @media (min-width: $bp-large-2) {
+        padding: 2em 13em;
+        padding: .5rem 1.5rem;
+    }
+}

@@ -14,7 +14,6 @@ $GLOBAL ELEMENTS
 body {
   font-family: 'Public Sans', sans-serif;
   font-size: 62.5%;
-  margin: 0;
   color: #9698a6;
 }
 
@@ -38,6 +37,10 @@ header {
   height: 7em;
   width: 100%;
   margin: 0;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  background-color: #fff;
   /* Small devices (landscape phones, 576px and up) */
   /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
   /* Large devices (desktops, 992px and up) */
@@ -89,7 +92,7 @@ header #bars:hover {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48em) {
   header ul li a {
     font-size: 1.125em;
   }
@@ -101,38 +104,28 @@ header #bars:hover {
   }
   header .request-button {
     display: block;
-    border: none;
-    color: #fff;
-    font-size: 1.1em;
-    padding: .5rem .8rem;
-    border-radius: 1rem;
-    background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
-    background: -webkit-linear-gradient(left, #31d35c, #2bb7da);
-    background: linear-gradient(0.25turn, #31d35c, #2bb7da);
-  }
-  header .request-button:hover {
-    background: -webkit-gradient(linear, left top, right top, from(#9ac7a6), to(#7fc3d4));
-    background: -webkit-linear-gradient(left, #9ac7a6, #7fc3d4);
-    background: linear-gradient(0.25turn, #9ac7a6, #7fc3d4);
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 62em) {
   header {
-    padding: 2em 0;
-    width: 80%;
-    margin: 0 auto;
+    padding: 2em 13em;
   }
-  header .request-button {
-    font-size: 1.1em;
-    padding: .5rem 1.5rem;
-    border-radius: 1rem;
+}
+
+@media (min-width: 75em) {
+  header ul li:not(:last-child) {
+    padding-right: 3em;
+  }
+  header ul li a {
+    font-size: 1.3em;
   }
 }
 
 .main-top {
   background-color: #fafafa;
   height: 70em;
+  margin-top: 7em;
 }
 
 .main-top .main-top-left {
@@ -417,6 +410,30 @@ footer .footer-container .row .footer-right p {
 /*------------------------------------*\
     $COMPONENTS
 \*------------------------------------*/
+.request-button {
+  border: none;
+  color: #fff;
+  font-size: 1.1em;
+  padding: .5rem .8rem;
+  border-radius: 1rem;
+  background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
+  background: -webkit-linear-gradient(left, #31d35c, #2bb7da);
+  background: linear-gradient(0.25turn, #31d35c, #2bb7da);
+}
+
+.request-button:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#9ac7a6), to(#7fc3d4));
+  background: -webkit-linear-gradient(left, #9ac7a6, #7fc3d4);
+  background: linear-gradient(0.25turn, #9ac7a6, #7fc3d4);
+}
+
+@media (min-width: 62em) {
+  .request-button {
+    padding: 2em 13em;
+    padding: .5rem 1.5rem;
+  }
+}
+
 .header-modal-container {
   height: 100vh;
   width: 100vw;
@@ -424,7 +441,6 @@ footer .footer-container .row .footer-right p {
   top: 7em;
   left: 0;
   background-color: rgba(0, 0, 0, 0.2);
-  z-index: 2;
   display: none;
 }
 
@@ -432,7 +448,6 @@ footer .footer-container .row .footer-right p {
   background-color: #fff;
   position: fixed;
   width: 80vw;
-  z-index: 3;
   top: 8em;
   left: 10vw;
   padding: 2em 0;
