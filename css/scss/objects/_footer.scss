@@ -1,0 +1,81 @@
+footer {
+    height: 20em;
+    background-color: hsl(233, 26%, 24%);
+
+    .footer-container {
+        height: 100%;
+
+        .row {
+            height: 100%;
+            padding: 4em 0;
+
+            .footer-left {
+
+                >img {
+                    height: 2em;
+                }
+
+                ul {
+                    height: 10em;
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    padding-top: 8em;
+
+                    li {
+                        height: 2em;
+                        display: inline-block;
+
+                        &:not(:last-child) {
+                            padding-right: .8em;
+                        }
+                    }
+                }
+            }
+
+            .footer-middle {
+                ul {
+                    height: 100%;
+                    display: grid;
+                    padding: 0;
+                    margin: 0;
+                    list-style-type: none;
+                    grid-template-columns: 16em 16em;
+                    grid-template-rows: 4em 4em;
+
+                    li {
+                        font-weight: 300;
+                        font-size: 1.8em;
+                        color: #fff;
+                        display: flex;
+                        align-items: center;
+
+                        &:hover {
+                            color: hsl(192, 70%, 51%);
+                            cursor: pointer;
+                        }
+
+                        a {
+                            color: inherit;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+
+            .footer-right {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: space-between;
+
+                p {
+                    font-weight: 300;
+                    font-size: 1.5em;
+                    margin: 0;
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,116 @@
+header {
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7em;
+    width: 100%;
+    margin: 0;
+
+    img {
+        width: 7rem;
+    }
+
+    .main-nav,
+    .request-button {
+        display: none;
+    }
+
+    #bars {
+        font-size: 2em;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: $bp-small-2) {
+        .main-nav {
+            display: block;
+        }
+
+        #bars {
+            display: none;
+        }
+
+        ul {
+            margin: 0;
+
+            li {
+                display: inline-block;
+
+                &:not(:last-child) {
+                    padding-right: 2em;
+                }
+
+                a {
+                    font-size: 1.3em;
+                    color: inherit;
+
+                    &:hover {
+                        color: hsl(233, 26%, 24%);
+                        text-decoration: none;
+                        padding-bottom: 1.4rem;
+                        border-bottom: hsl(136, 65%, 51%) 4px solid;
+                    }
+                }
+
+            }
+        }
+
+
+    }
+
+    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+    @media (min-width: 768px) {
+        ul {
+            li {
+
+                a {
+                    font-size: 1.125em;
+
+                    &:hover {
+                        color: hsl(233, 26%, 24%);
+                        text-decoration: none;
+                        padding-bottom: 1.4rem;
+                        border-bottom: hsl(136, 65%, 51%) 4px solid;
+                    }
+                }
+
+            }
+        }
+
+        .request-button {
+            display: block;
+            border: none;
+            color: #fff;
+            font-size: 1.1em;
+            padding: .5rem .8rem;
+            border-radius: 1rem;
+            background: linear-gradient(.25turn, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+
+            &:hover {
+                background: linear-gradient(.25turn, rgb(154, 199, 166), rgb(127, 195, 212));
+            }
+        }
+
+    }
+
+    /* Large devices (desktops, 992px and up) */
+    @media (min-width: 992px) {
+        // padding: 2em 10em;
+        padding: 2em 0;
+        width: 80%;
+        margin: 0 auto;
+
+        .request-button {
+            font-size: 1.1em;
+            padding: .5rem 1.5rem;
+            border-radius: 1rem;
+        }
+    }
+
+    /* Extra large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) {}
+}

@@ -1,0 +1,64 @@
+.main-bottom {
+    height: 70em;
+    padding: 10em 0 5em;
+    background-color: hsl(0, 0%, 98%);
+
+    .container {
+        padding: 0;
+        height: 100%;
+    }
+
+    .main-bottom-top {
+        h1 {
+            font-weight: 300;
+            color: hsl(233, 26%, 24%);
+            margin-bottom: 2rem;
+        }
+    }
+
+    .main-center-bottom {
+        display: flex;
+        justify-content: space-between;
+
+
+        .latest-article-card {
+            width: 23.3%;
+            background-color: hsl(0, 0%, 100%);
+
+            img {
+                display: inline-block;
+                width: 100%;
+                height: 20em;
+                object-fit: cover;
+            }
+
+            .article-content {
+                padding: 2.5em 2em;
+
+                h4 {
+                    font-weight: 300;
+                    font-size: 2em;
+                    color: hsl(233, 26%, 24%);
+
+                    &:hover {
+                        color: hsl(192, 70%, 51%);
+                        cursor: pointer;
+                    }
+                }
+
+                p {
+                    font-weight: 300;
+                    font-size: 1.5em;
+                    margin: 0;
+
+                    &.author {
+                        font-size: 1.5em;
+                        margin-bottom: 1rem;
+                    }
+                }
+
+            }
+        }
+    }
+
+}

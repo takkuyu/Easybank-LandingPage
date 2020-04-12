@@ -10,7 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'>
   <link rel="stylesheet" href='css/styles.css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <title>Frontend Mentor | Easybank landing page</title>
 </head>
@@ -18,14 +20,32 @@
 <body>
   <header>
     <img src='./images/logo.svg'>
-    <ul>
-      <li><a href='#'>Home</a></li>
-      <li><a href='#'>About</a></li>
-      <li><a href='#'>Contact</a></li>
-      <li><a href='#'>Blog</a></li>
-      <li><a href='#'>Careers</a></li>
-    </ul>
+    <nav class="main-nav">
+      <ul>
+        <li><a href='#'>Home</a></li>
+        <li><a href='#'>About</a></li>
+        <li><a href='#'>Contact</a></li>
+        <li><a href='#'>Blog</a></li>
+        <li><a href='#'>Careers</a></li>
+      </ul>
+    </nav>
     <button class="request-button">Request Invite</button>
+    <i id='bars' class="fas fa-bars"></i>
+
+    <div id='modal' class="header-modal-container">
+      <div class="header-modal">
+        <nav>
+          <ul>
+            <li><a href='#'>Home</a></li>
+            <li><a href='#'>About</a></li>
+            <li><a href='#'>Contact</a></li>
+            <li><a href='#'>Blog</a></li>
+            <li><a href='#'>Careers</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
   </header>
   <main>
 
@@ -136,7 +156,7 @@
     </section>
   </main>
 
-  <footer>
+  <!-- <footer>
     <div class="footer-container container">
       <div class="row">
         <div class="footer-left col-3">
@@ -165,7 +185,18 @@
         </div>
       </div>
     </div>
-  </footer>
+  </footer> -->
+
+  <script>
+
+    $(document).ready(function () {
+      $('#bars').click(function () {
+        $('#modal').toggle()
+        $(this).toggleClass('fa-times')
+      })
+    });
+
+  </script>
 </body>
 
 </html>

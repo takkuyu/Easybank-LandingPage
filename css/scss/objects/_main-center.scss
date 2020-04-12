@@ -1,0 +1,55 @@
+.main-center {
+    background-color: hsl(0, 0%, 96%);
+    height: 70em;
+    padding: 10em 0 10em;
+
+    .main-center-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding: 0;
+
+        .main-center-top {
+            h1 {
+                font-weight: 300;
+                color: hsl(233, 26%, 24%);
+                margin-bottom: 2rem;
+            }
+
+            p {
+                font-weight: 300;
+                font-size: 1.8em;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .main-center-bottom {
+            display: flex;
+            justify-content: space-between;
+
+            .reason-card {
+                width: 24%;
+
+                img {
+                    display: inline-block;
+                    margin-bottom: 2rem;
+                }
+
+                h3 {
+                    font-weight: 300;
+                    color: hsl(233, 26%, 24%);
+                    margin-bottom: 2rem;
+                }
+
+                p {
+                    font-weight: 300;
+                    font-size: 1.7em;
+                    margin-bottom: 0;
+                }
+            }
+
+        }
+    }
+
+}

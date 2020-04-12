@@ -1,0 +1,30 @@
+
+/*------------------------------------*\
+$GLOBAL ELEMENTS
+\*------------------------------------*/
+@import "generic/variables";
+@import "base/body";
+
+
+/*------------------------------------*\
+    $PAGE STRUCTURE
+\*------------------------------------*/
+@import "objects/header";
+@import "objects/main-top";
+@import "objects/main-center";
+@import "objects/main-bottom";
+@import "objects/footer";
+
+/*------------------------------------*\
+    $COMPONENTS
+\*------------------------------------*/
+@import "objects/button";
+@import "objects/header-modal";
+
+
+// html {
+//     font-size: 10px;
+// }
+
+
+
