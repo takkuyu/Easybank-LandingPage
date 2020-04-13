@@ -2,16 +2,12 @@
     border: none;
     color: #fff;
     font-size: 1.1em;
-    padding: .5rem .8rem;
-    border-radius: 1rem;
+    padding: .7rem 2rem;
+
+    border-radius: 1.5rem;
     background: linear-gradient(.25turn, $Lime-Green, $Bright-Cyan);
 
     &:hover {
         background: linear-gradient(.25turn, rgb(154, 199, 166), rgb(127, 195, 212));
-    }
-
-    @media (min-width: $bp-large-2) {
-        padding: 2em 13em;
-        padding: .5rem 1.5rem;
     }
 }

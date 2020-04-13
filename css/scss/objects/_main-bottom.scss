@@ -1,31 +1,33 @@
 .main-bottom {
-    height: 70em;
-    padding: 10em 0 5em;
     background-color: hsl(0, 0%, 98%);
-
-    .container {
-        padding: 0;
-        height: 100%;
-    }
+    padding: 10em 0;
+    text-align: center;
 
     .main-bottom-top {
+        margin-bottom: 3rem;
+
         h1 {
             font-weight: 300;
-            color: hsl(233, 26%, 24%);
-            margin-bottom: 2rem;
+            color: $Dark-Blue;
+            font-size: 3em;
         }
     }
 
-    .main-center-bottom {
-        display: flex;
-        justify-content: space-between;
-
+    .main-bottom-bottom {
 
         .latest-article-card {
-            width: 23.3%;
             background-color: hsl(0, 0%, 100%);
+            border-radius: 10px;
+            text-align: left;
+            margin: 0 2%;
+
+
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+            }
 
             img {
+                border-radius: 10px 10px 0px 0px;
                 display: inline-block;
                 width: 100%;
                 height: 20em;
@@ -33,32 +35,81 @@
             }
 
             .article-content {
-                padding: 2.5em 2em;
+                padding: 8%;
 
                 h4 {
                     font-weight: 300;
-                    font-size: 2em;
-                    color: hsl(233, 26%, 24%);
+                    font-size: 1.8em;
+                    color: $Dark-Blue;
 
                     &:hover {
-                        color: hsl(192, 70%, 51%);
+                        color: $Bright-Cyan;
                         cursor: pointer;
                     }
                 }
 
                 p {
                     font-weight: 300;
-                    font-size: 1.5em;
+                    font-size: 1.3em;
                     margin: 0;
 
                     &.author {
-                        font-size: 1.5em;
+                        font-size: 1em;
                         margin-bottom: 1rem;
                     }
                 }
-
             }
         }
     }
 
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: $bp-med-2) {
+
+        .main-bottom-bottom {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .latest-article-card {
+                width: 48%;
+                margin: 0;
+
+                &:nth-child(3) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    /* Extra large devices (large desktops, 1200px and up) */
+    @media (min-width: $bp-xl) {
+
+        text-align: left;
+        .main-bottom-container{
+            padding: 0;
+
+            .main-bottom-top {
+                h1 {
+                    font-size: 4em;
+                }
+    
+                margin-bottom: 4rem;
+            }
+    
+            .main-bottom-bottom {
+    
+                .latest-article-card {
+                    margin-bottom: 0;
+                    width: 23.5%;
+    
+                    &:nth-child(n) {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+        }
+
+
+    }
 }

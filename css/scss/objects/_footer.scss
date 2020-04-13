@@ -1,81 +1,146 @@
 footer {
-    height: 20em;
-    background-color: hsl(233, 26%, 24%);
+    background-color: $Dark-Blue;
+
+    .row {
+        margin: 0;
+    }
+
+    .desc {
+        margin: 0;
+        font-size: 1.5em;
+        text-align: center;
+        padding: 1em;
+
+        a {
+            color: $Light-Purple;
+            background: -webkit-linear-gradient(.25turn, $Lime-Green, $Bright-Cyan);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+    }
 
     .footer-container {
-        height: 100%;
 
-        .row {
-            height: 100%;
-            padding: 4em 0;
+        padding: 4em 0;
+        text-align: center;
 
-            .footer-left {
+        .footer-left {
+            padding: 0;
 
-                >img {
-                    height: 2em;
-                }
+            .easybank-logo {
+                height: 2em;
+                margin-bottom: 2rem;
+            }
 
-                ul {
-                    height: 10em;
-                    list-style: none;
-                    padding: 0;
-                    margin: 0;
-                    padding-top: 8em;
+            ul {
+                list-style-type: none;
+                margin-bottom: 2rem;
 
-                    li {
-                        height: 2em;
-                        display: inline-block;
+                li {
+                    display: inline-block;
 
-                        &:not(:last-child) {
-                            padding-right: .8em;
-                        }
+                    &:not(:last-child) {
+                        padding-right: 1em;
                     }
                 }
             }
+        }
 
-            .footer-middle {
-                ul {
-                    height: 100%;
-                    display: grid;
-                    padding: 0;
-                    margin: 0;
-                    list-style-type: none;
-                    grid-template-columns: 16em 16em;
-                    grid-template-rows: 4em 4em;
+        .footer-middle {
+            padding: 0;
 
-                    li {
-                        font-weight: 300;
-                        font-size: 1.8em;
-                        color: #fff;
-                        display: flex;
-                        align-items: center;
+            ul {
+                list-style-type: none;
+                margin-bottom: 2rem;
+
+                li {
+                    font-weight: 300;
+                    font-size: 1.3em;
+                    color: rgba(255, 255, 255, .8);
+
+                    a {
+                        color: inherit;
+                        text-decoration: none;
 
                         &:hover {
                             color: hsl(192, 70%, 51%);
                             cursor: pointer;
                         }
+                    }
 
-                        a {
-                            color: inherit;
-                            text-decoration: none;
+                    &:not(:last-child) {
+                        margin-bottom: .8em;
+                    }
+                }
+            }
+        }
+
+        .footer-right {
+            padding: 0;
+
+            button {
+                margin-bottom: 2rem;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+
+        /* Medium devices (tablets, 768px and up) */
+        @include tablet {
+            text-align: left;
+
+            .footer-left {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                ul {
+                    margin: 0;
+                }
+
+                .easybank-logo {
+                    width: 13em;
+                    margin: 0;
+                }
+            }
+
+            .footer-middle {
+
+                ul {
+                    height: 100%;
+                    text-align: left;
+                    width: 80%;
+                    margin: 0 auto;
+                    display: grid;
+                    grid-template-columns: 50% 50%;
+                    grid-template-rows: 33% 33% 33%;
+                    margin-bottom: 0;
+                    padding: 0;
+
+                    li {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+
+                        &:nth-child(n) {
+                            margin: 0;
                         }
+                    }
+
+                    @include laptop {
+                        width: 100%;
+                        margin: 0;
                     }
                 }
             }
 
             .footer-right {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-end;
-                justify-content: space-between;
-
-                p {
-                    font-weight: 300;
-                    font-size: 1.5em;
-                    margin: 0;
-                }
+                text-align: right;
             }
         }
-
     }
 }
