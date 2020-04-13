@@ -10,4 +10,8 @@
     &:hover {
         background: linear-gradient(.25turn, rgb(154, 199, 166), rgb(127, 195, 212));
     }
+
+    &:focus{
+        outline: none;
+    }
 }

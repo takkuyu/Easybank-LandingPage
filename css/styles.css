@@ -7,6 +7,7 @@ $GLOBAL ELEMENTS
 /*------------------------------------*\
     $MIXINS
 \*------------------------------------*/
+/* Extra Small devices (landscape phones, 327px and up) */
 /* Small devices (landscape phones, 576px and up) */
 /* Medium devices (tablets, 768px and up) */
 /* Large devices (desktops, 992px and up) */
@@ -164,6 +165,12 @@ header #bars:hover {
   font-size: 4em;
   color: #2d314d;
   margin-bottom: 2rem;
+}
+
+@media (max-width: 20.4375em) {
+  .main-top .row .main-top-left h1 {
+    font-size: 3em;
+  }
 }
 
 .main-top .row .main-top-left p {
@@ -575,8 +582,6 @@ footer .footer-container .footer-right p {
   footer .footer-container .footer-middle ul {
     height: 100%;
     text-align: left;
-    width: 80%;
-    margin: 0 auto;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 50% 50%;
@@ -633,6 +638,10 @@ footer .footer-container .footer-right p {
   background: -webkit-gradient(linear, left top, right top, from(#9ac7a6), to(#7fc3d4));
   background: -webkit-linear-gradient(left, #9ac7a6, #7fc3d4);
   background: linear-gradient(0.25turn, #9ac7a6, #7fc3d4);
+}
+
+.request-button:focus {
+  outline: none;
 }
 
 .header-modal-container {

@@ -2,6 +2,13 @@
     $MIXINS
 \*------------------------------------*/
 
+/* Extra Small devices (landscape phones, 327px and up) */
+@mixin xs-phone {
+    @media (max-width: ($bp-x-small)) {
+        @content;
+    }
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @mixin phone {
     @media (min-width: ($bp-small-2)) {
